@@ -76,7 +76,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 3**
 * Type "root" as the login/username then press enter 
 
-![Example-Root](https://i.imgur.com/vYrWeye.png)
+![Example-Root](https://i.imgur.com/S1KAWiX.png)
 ***
 
 ***Step 4**
