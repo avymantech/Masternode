@@ -64,40 +64,28 @@ If you require further assistance contact the support team @ [Discord](https://d
 ## Section C: Connecting to the VPS & Installing the MN script via Terminal
 
 ***Step 1***
-* Copy your VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
-![Example-Vultr](https://i.imgur.com/qoiFzRL.png)
+* Use command ssh root@ VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
+![Example-Vultr](https://i.imgur.com/ESZzedi.png)
 ***
 
 
 ***Step 2*** 
-* Once you have clicked open it will open a security alert (click yes).  
+* Copy and Paste your Vultr password into Terminal.  
 ***
 
 
-***Step 3**
-* Type "root" as the login/username then press enter 
-
-![Example-Root](https://i.imgur.com/S1KAWiX.png)
+***Step 3** 
+* Paste the password into the terminal by right clicking (it will not show the password so just press enter)
+![Example-RootPassEnter](https://i.imgur.com/1iDNVCW.png)
 ***
 
 ***Step 4**
-* Copy the root password from the VULTR server page.
-
-![Example-RootPass](https://i.imgur.com/JnXQXav.png)
-***
-
-***Step 5** 
-* Paste the password into the terminal by right clicking (it will not show the password so just press enter)
-![Example-RootPassEnter](https://i.imgur.com/7rv4zgP.png)
-***
-
-***Step 6**
 * Paste the code below into the terminal then press enter (it will just go to a new line)
 
 `wget -q https://raw.githubusercontent.com/Realbityoda/Lobstex/master/lobstex_install.sh`
 ***
 
-***Step 7**
+***Step 5**
 * Paste the code below into the putty terminal then press enter
 
 `bash lobstex_install.sh`
@@ -106,17 +94,17 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***
 
-***Step 8**
+***Step 6**
 * Sit back and wait for the install (this will take 10-20 mins)
 ***
 
-***Step 9**
+***Step 7**
 * When prompted to enter your GEN key - press enter
 
 ![Example-installing](https://i.imgur.com/8ZAjIEx.png)
 ***
 
-***Step 10**
+***Step 8**
 * You will now see all of the relavant information for your server.
 * Keep this terminal open as we will need the info for the wallet setup.
 ![Example-installing](https://i.imgur.com/Q87LcnW.png)
