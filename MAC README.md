@@ -54,7 +54,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 
-## Section B: Downloading and installing Putty. 
+## Section B: Using Terminal for Mac to connect to VPS. 
 
 ***Step 1***
 * Open Terminal.  ![Example-PuttyInstaller](https://i.imgur.com/hDEkM2Y.png)
