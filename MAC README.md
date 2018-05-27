@@ -1,5 +1,5 @@
 ![Logo](https://i.imgur.com/iv5Zdek.png)
-# Lobstex Masternode Setup Guide (Ubuntu 16.04)
+# Lobstex Masternode Setup Guide  For MAC (Ubuntu 16.04)
 This guide will assist you in setting up a Lobstex Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
 
 If you require further assistance contact the support team @ [Discord](https://discord.gg/BDbgFhQ)
@@ -57,58 +57,45 @@ If you require further assistance contact the support team @ [Discord](https://d
 ## Section B: Downloading and installing Putty. 
 
 ***Step 1***
-* Download Putty [here](https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.70-installer.msi)
+* Open Terminal.  ![Example-PuttyInstaller](https://i.imgur.com/hDEkM2Y.png)
 ***
 
-***Step 2***
-* Select the correct installer depending upon your operating system. Then follow the install instructions. 
-
-![Example-PuttyInstaller](https://i.imgur.com/9yy4KQB.png)
-***
-
-
-## Section C: Connecting to the VPS & Installing the MN script via Putty.
+## Section C: Connecting to the VPS & Installing the MN script via Terminal
 
 ***Step 1***
 * Copy your VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
-![Example-Vultr](https://i.imgur.com/spEVVCy.png)
+![Example-Vultr](https://i.imgur.com/qoiFzRL.png)
 ***
 
-***Step 2***
-* Open the putty application and fill in the "Hostname" box with the IP of your VPS then click "Open"
-![Example-PuttyInstaller](https://i.imgur.com/BcSaLHI.png)
-***
 
-***Step 3*** 
+***Step 2*** 
 * Once you have clicked open it will open a security alert (click yes).  
 ***
 
 
-***Step 4***
+***Step 3**
 * Type "root" as the login/username then press enter 
 
 ![Example-Root](https://i.imgur.com/vYrWeye.png)
 ***
 
-***Step 5***
+***Step 4**
 * Copy the root password from the VULTR server page.
 ![Example-RootPass](https://i.imgur.com/JnXQXav.png)
-
 ***
 
-
-***Step 6*** 
-* Paste the password into the Putty terminal by right clicking (it will not show the password so just press enter)
-![Example-RootPassEnter](https://i.imgur.com/9CSbbjF.png)
+***Step 5** 
+* Paste the password into the terminal by right clicking (it will not show the password so just press enter)
+![Example-RootPassEnter](https://i.imgur.com/7rv4zgP.png)
 ***
 
-***Step 7***
-* Paste the code below into the Putty terminal then press enter (it will just go to a new line)
+***Step 6**
+* Paste the code below into the terminal then press enter (it will just go to a new line)
 
 `wget -q https://raw.githubusercontent.com/Realbityoda/Lobstex/master/lobstex_install.sh`
 ***
 
-***Step 8***
+***Step 7**
 * Paste the code below into the putty terminal then press enter
 
 `bash lobstex_install.sh`
@@ -117,17 +104,17 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***
 
-***Step 9***
+***Step 8**
 * Sit back and wait for the install (this will take 10-20 mins)
 ***
 
-***Step 10***
+***Step 9**
 * When prompted to enter your GEN key - press enter
 
 ![Example-installing](https://i.imgur.com/sLvWd1S.png)
 ***
 
-***Step 11***
+***Step 10**
 * You will now see all of the relavant information for your server.
 * Keep this terminal open as we will need the info for the wallet setup.
 ![Example-installing](https://i.imgur.com/Q87LcnW.png)
