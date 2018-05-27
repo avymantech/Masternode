@@ -65,7 +65,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 1***
 * Use command ssh root@ VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
-![Example-Vultr](https://i.imgur.com/9uG5dxd.png
+![Example-Vultr](https://i.imgur.com/9uG5dxd.png)
 ***
 
 
