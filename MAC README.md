@@ -57,7 +57,8 @@ If you require further assistance contact the support team @ [Discord](https://d
 ## Section B: Using Terminal for Mac to connect to VPS. 
 
 ***Step 1***
-* Open Terminal.  ![Example-PuttyInstaller](https://i.imgur.com/hDEkM2Y.png)
+* Open Terminal. 
+![Example-PuttyInstaller](https://i.imgur.com/hDEkM2Y.png)
 ***
 
 ## Section C: Connecting to the VPS & Installing the MN script via Terminal
@@ -81,6 +82,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ***Step 4**
 * Copy the root password from the VULTR server page.
+
 ![Example-RootPass](https://i.imgur.com/JnXQXav.png)
 ***
 
