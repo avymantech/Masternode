@@ -44,7 +44,8 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   wget $COIN_TGZ
-  sudo apt-get install zip
+  sudo apt-get install unzip
+  unzip linux.zip
   chmod +x $COIN_DAEMON 
   ./$COIN_DAEMON
   compile_error
