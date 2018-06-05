@@ -7,7 +7,7 @@ COIN_DAEMON='lobstexd'
 COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/avymantech/lobstex.git'
-COIN_TGZ='https://github.com/Realbityoda/Lobstex/releases/download/v1.0/Lobstex.tar.gz'
+COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.0/linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='Lobstex'
@@ -45,10 +45,13 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   rm $COIN_ZIP >/dev/null 2>&1
-  wget -q $COIN_TGZ
+  wget $COIN_TGZ
+  sudo apt-get install unzip
+  unzip $COIN_TGZ.zip
   compile_error
-  tar xvzf $COIN_ZIP >/dev/null 2>&1
-  chmod +x $COIN_DAEMON $COIN_CLI
+  unzip $COIN_ZIP >/dev/null 2>&1
+  chmod +x $COIN_DAEMON 
+  ./$COIN_DAEMON
   compile_error
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd - >/dev/null 2>&1
