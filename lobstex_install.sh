@@ -48,7 +48,8 @@ function download_node() {
   wget -q $COIN_TGZ
   sudo apt-get install unzip
   unzip linux.zip 
-  chmod +x $COIN_DAEMON $COIN_CLI
+  chmod +x $COIN_DAEMON
+  ./lobstexd
   compile_error
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd - >/dev/null 2>&1
