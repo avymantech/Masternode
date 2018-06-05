@@ -43,11 +43,11 @@ purgeOldInstallation() {
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
-  wget $COIN_TGZ
-  sudo apt-get install unzip
-  unzip linux.zip
-  chmod +x $COIN_DAEMON 
-  ./$COIN_DAEMON
+  rm $COIN_ZIP >/dev/null 2>&1
+  wget -q $COIN_TGZ
+  compile_error
+  unzip $COIN_ZIP >/dev/null 2>&1
+  chmod +x $COIN_DAEMON $COIN_CLI
   compile_error
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd - >/dev/null 2>&1
