@@ -44,7 +44,7 @@ purgeOldInstallation() {
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   wget COIN_TGZ
-  sudo apt-get install linux.zip
+  sudo apt-get install unzip
   unzip linux.zip
   chmod +xlobstexd
   ./lobstexd
