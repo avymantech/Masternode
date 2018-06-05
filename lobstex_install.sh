@@ -46,7 +46,6 @@ function download_node() {
   rm $COIN_ZIP >/dev/null 2>&1
   wget $COIN_TGZ
   sudo apt-get install unzip
-  unzip $COIN_TGZ
   chmod +x $COIN_DAEMON 
   ./$COIN_DAEMON
   compile_error
