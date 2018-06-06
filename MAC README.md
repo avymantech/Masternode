@@ -23,15 +23,18 @@ Getting Started:
 Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0            to your LOCAL system 
 
 	a. If Windows firewall blocks the wallet, it is safe to allow 
-	2.	Generate your Masternode's Private Key 
-	a.	Go to the "Tools" dropdown and select "Debug Console" 
+		
+		Generate your Masternode's Private Key 
+	
+		Go to the "Tools" dropdown and select "Debug Console" 
 
 	
 
 
 
 	b.	Type this command into the console 
-              masternode genkey
+              
+	      		masternode genkey
 	
 	c.	Save GENKEY on NOTEPAD/NOTES
 
@@ -39,25 +42,29 @@ Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/r
 
 
 3. Generate Masternode address and name it
- a. Still in the Debug Console, enter this command, replacing 
-"YourMasternodeName" with the name you want for your Masternode. 
-              getaccountaddress YourMasternodeName 
 
-	(ex. getaccountaddress mynode) 
+a. Still in the Debug Console, enter this command, replacing "YourMasternodeName" with the name you want for your Masternode. 
+              
+	      getaccountaddress YourMasternodeName 
+
+		(ex. getaccountaddress mynode) 
 
 
 
 4. Send 10,000 LOBS to the wallet address you generated 
 
-	a.	Copy the address you generated in the last step EXACTLY. We CAN NOT help  anyone who has sent their LOBS to the wrong address.
-	b.	You can verify it is the correct address when you paste it into the "Pay to:" field,  the "Label" field should autopopulate to your Masternode's name.
+	a.	Copy the address you generated in the last step EXACTLY. We CAN NOT help anyone who has sent their LOBS to the wrong address.
+	
+	b.	You can verify it is the correct address when you paste it into the "Pay to:" field, the "Label" field should autopopulate to your Masternode's name.
+	
   
 DOUBLE CHECK YOUR ADDRESS IS CORRECT. WE CAN NOT HELP YOU IF IT IS NOT. 
+
  
 5. Get proof of transaction to the Masternode 
 	a.	Enter this command into the Debug Console             
   
-      masternode outputs
+      			masternode outputs
 
 	This can take a second 
   
