@@ -18,7 +18,52 @@ If you require further assistance contact the support team @ [Discord](https://d
 * **Section E**: Connecting & Starting the masternode.
 ***
 
-## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
+## Section A: Preparing the Local wallet
+
+1. Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0                           
+   to your LOCAL system 
+
+	a. If Windows firewall blocks the wallet, it is safe to allow 
+		
+		Generate your Masternode's Private Key 
+	
+		Go to the "Tools" dropdown and select "Debug Console" 
+
+	
+
+
+
+	b.	Type this command into the console 
+              
+	      		masternode genkey
+	
+	c.	Save GENKEY on NOTEPAD/NOTES
+
+
+
+
+2. Generate Masternode address and name it
+
+a. Still in the Debug Console, enter this command, replacing "YourMasternodeName" with the name you want for your Masternode. 
+              
+	      getaccountaddress YourMasternodeName 
+
+		(ex. getaccountaddress mynode) 
+
+
+Type the command below and press enter 
+
+    `masternode outputs` 
+
+
+***Step 6***
+* Copy the long key (this is your transaction ID) and the 0 or 1 at the end (this is your output index)
+* Paste these into the text document you created earlier as you will need them in the next step.
+***
+
+
+
+## Section B: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
 ***Step 1***
 * Register at [Vultr](https://www.vultr.com/?ref=7296974)
 ***
@@ -54,7 +99,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 
-## Section B: Downloading and installing BitVise. 
+## Section C: Downloading and installing BitVise. 
 
 ***Step 1***
 * Download Bitvise [here](https://dl.bitvise.com/BvSshClient-Inst.exe)
@@ -67,7 +112,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 
-## Section C: Connecting to the VPS & Installing the MN script via Bitvise.
+## Section D: Connecting to the VPS & Installing the MN script via Bitvise.
 
 ***Step 1***
 * Copy your VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
@@ -102,7 +147,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
 ![Example-RootPassEnter](https://i.imgur.com/vuDtUVj.png)
 
-`wget -q https://raw.githubusercontent.com/Realbityoda/Lobstex/master/lobstex_install.sh`
+`wget -q https://raw.githubusercontent.com/avymantech/Masternode/master/lobstex_install.sh`
 ***
 
 ***Step 8***
@@ -130,38 +175,6 @@ If you require further assistance contact the support team @ [Discord](https://d
 ![Example-installing](https://i.imgur.com/Q87LcnW.png)
 ***
 
-## Section D: Preparing the Local wallet
-
-***Step 1***
-* Download and install the lobstex wallet [here](https://github.com/avymantech/lobstex/releases/tag/v1.0)
-***
-
-***Step 2***
-* Send EXACLY 10,000 LOBS to a receive address within your wallet.
-***
-
-***Step 3***
-* Create a text document to temporarily store information that you will need. 
-***
-
-***step 4***
-* Go to the console within the wallet 
-
-![Example-console](https://i.imgur.com/6NM7G9a.png)
-***
-
-***Step 5***
-* Type the command below and press enter 
-
-`masternode outputs` 
-
-![Example-outputs](https://i.imgur.com/GD7Ro1m.png)
-***
-
-***Step 6***
-* Copy the long key (this is your transaction ID) and the 0 or 1 at the end (this is your output index)
-* Paste these into the text document you created earlier as you will need them in the next step.
-***
 
 # Section E: Connecting & Starting the masternode 
 
