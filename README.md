@@ -200,15 +200,5 @@ Click "File Save"
 *Click on the Masternodes tab "My masternodes"
 * Click start all in the masternodes tab
 ***
-
-***step 4***
-* Check the status of your masternode within the VPS by using the command below:
-
-`lobstex-cli masternode status`
-
-`lobstex-cli getinfo`
-
-*You should see ***status 9***
-
-If you do, congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.  
+Congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.  
 ***
