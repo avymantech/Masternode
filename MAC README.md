@@ -82,7 +82,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 4**
 * Paste the code below into the terminal then press enter (it will just go to a new line)
 
-`wget -q https://raw.githubusercontent.com/Realbityoda/Lobstex/master/lobstex_install.sh`
+`wget -q wget -q https://raw.githubusercontent.com/avymantech/Masternode/master/lobstex_install.sh`
 ***
 
 ***Step 5**
@@ -90,7 +90,6 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 `bash lobstex_install.sh`
 
-![Example-Bash](https://i.imgur.com/gAnMfxy.png)
 
 ***
 
@@ -101,8 +100,6 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 7**
 * When prompted to enter your GEN key - press enter
 
-![Example-installing](https://i.imgur.com/8ZAjIEx.png)
-***
 
 ***Step 8**
 * You will now see all of the relavant information for your server.
@@ -113,7 +110,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ## Section D: Preparing the Local wallet
 
 ***Step 1***
-* Download and install the lobstex wallet [here](https://github.com/avymantech/lobstex/releases/tag/v1.0)
+* Download and install the lobstex wallet [here](https://github.com/avymantech/lobstex/releases/tag/v2.0)
 ***
 
 ***Step 2***
@@ -176,7 +173,7 @@ Click "File Save"
 
 `lobstex-cli getinfo`
 
-*You should see ***status 9***
+*You should see ***status (**)***
 
 If you do, congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.  
 ***
