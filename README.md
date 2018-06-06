@@ -36,6 +36,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 	b.	Type this command into the console 
               
 	      		masternode genkey
+			
 	
 	c.	Save GENKEY on NOTEPAD/NOTES
 
@@ -55,8 +56,6 @@ Type the command below and press enter
 
     `masternode outputs` 
 
-
-***Step 6***
 * Copy the long key (this is your transaction ID) and the 0 or 1 at the end (this is your output index)
 * Paste these into the text document you created earlier as you will need them in the next step.
 ***
