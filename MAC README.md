@@ -20,7 +20,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 Getting Started: 
 
-Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0            to your LOCAL system 
+1. Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0            to your LOCAL system 
 
 	a. If Windows firewall blocks the wallet, it is safe to allow 
 		
@@ -41,7 +41,7 @@ Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/r
 
 
 
-3. Generate Masternode address and name it
+2. Generate Masternode address and name it
 
 a. Still in the Debug Console, enter this command, replacing "YourMasternodeName" with the name you want for your Masternode. 
               
@@ -51,7 +51,7 @@ a. Still in the Debug Console, enter this command, replacing "YourMasternodeName
 
 
 
-4. Send 10,000 LOBS to the wallet address you generated 
+3. Send 10,000 LOBS to the wallet address you generated 
 
 	a.	Copy the address you generated in the last step EXACTLY. We CAN NOT help anyone who has sent their LOBS to the wrong address.
 	
@@ -61,7 +61,7 @@ a. Still in the Debug Console, enter this command, replacing "YourMasternodeName
 DOUBLE CHECK YOUR ADDRESS IS CORRECT. WE CAN NOT HELP YOU IF IT IS NOT. 
 
  
-5. Get proof of transaction to the Masternode 
+4. Get proof of transaction to the Masternode 
 	a.	Enter this command into the Debug Console             
   
       			masternode outputs
