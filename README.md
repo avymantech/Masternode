@@ -2,7 +2,7 @@
 # Lobstex Masternode Setup Guide (Ubuntu 16.04)
 This guide will assist you in setting up a Lobstex Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
 
-If you require further assistance contact the support team @ [Discord](https://discord.gg/BDbgFhQ)
+If you require further assistance contact the support team @ [Discord](https://discord.gg/pdUX3Uh)
 ***
 ## Requirements
 1) **10,000 Lobstex coins.**
