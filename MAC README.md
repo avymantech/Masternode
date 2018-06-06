@@ -51,6 +51,7 @@ a. Still in the Debug Console, enter this command, replacing "YourMasternodeName
 
 
 
+
 3. Send 10,000 LOBS to the wallet address you generated 
 
 	a.	Copy the address you generated in the last step EXACTLY. We CAN NOT help anyone who has sent their LOBS to the wrong address.
@@ -59,6 +60,7 @@ a. Still in the Debug Console, enter this command, replacing "YourMasternodeName
 	
   
 DOUBLE CHECK YOUR ADDRESS IS CORRECT. WE CAN NOT HELP YOU IF IT IS NOT. 
+
 
  
 4. Get proof of transaction to the Masternode 
