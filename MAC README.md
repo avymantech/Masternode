@@ -18,9 +18,10 @@ If you require further assistance contact the support team @ [Discord](https://d
 * **Section E**: Connecting & Starting the masternode.
 ***
 
-Getting Started: 
+## Section A: Preparing the Local wallet
 
-1. Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0            to your LOCAL system 
+1. Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0                           
+   to your LOCAL system 
 
 	a. If Windows firewall blocks the wallet, it is safe to allow 
 		
@@ -35,6 +36,7 @@ Getting Started:
 	b.	Type this command into the console 
               
 	      		masternode genkey
+			
 	
 	c.	Save GENKEY on NOTEPAD/NOTES
 
@@ -50,31 +52,16 @@ a. Still in the Debug Console, enter this command, replacing "YourMasternodeName
 		(ex. getaccountaddress mynode) 
 
 
+Type the command below and press enter 
 
+    `masternode outputs` 
 
-3. Send 10,000 LOBS to the wallet address you generated 
-
-	a.	Copy the address you generated in the last step EXACTLY. We CAN NOT help anyone who has sent their LOBS to the wrong address.
-	
-	b.	You can verify it is the correct address when you paste it into the "Pay to:" field, the "Label" field should autopopulate to your Masternode's name.
-	
-  
-DOUBLE CHECK YOUR ADDRESS IS CORRECT. WE CAN NOT HELP YOU IF IT IS NOT. 
-
-
- 
-4. Get proof of transaction to the Masternode 
-	a.	Enter this command into the Debug Console             
-  
-      			masternode outputs
-
-	This can take a second 
-  
-  
-  
+* Copy the long key (this is your transaction ID) and the 0 or 1 at the end (this is your output index)
+* Paste these into the text document you created earlier as you will need them in the next step.
+***
   
 
-## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
+## Section B: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
 ***Step 1***
 * Register at [Vultr](https://www.vultr.com/?ref=7296974)
 ***
@@ -161,39 +148,6 @@ DOUBLE CHECK YOUR ADDRESS IS CORRECT. WE CAN NOT HELP YOU IF IT IS NOT.
 * You will now see all of the relavant information for your server.
 * Keep this terminal open as we will need the info for the wallet setup.
 ![Example-installing](https://i.imgur.com/Q87LcnW.png)
-***
-
-## Section D: Preparing the Local wallet
-
-***Step 1***
-* Download and install the lobstex wallet [here](https://github.com/avymantech/lobstex/releases/tag/v2.0)
-***
-
-***Step 2***
-* Send EXACLY 10000 LOBS to a receive address within your wallet.
-***
-
-***Step 3***
-* Create a text document to temporarily store information that you will need. 
-***
-
-***step 4***
-* Go to the console within the wallet 
-
-![Example-console](https://i.imgur.com/6NM7G9a.png)
-***
-
-***Step 5***
-* Type the command below and press enter 
-
-`masternode outputs` 
-
-![Example-outputs](https://i.imgur.com/GD7Ro1m.png)
-***
-
-***Step 6***
-* Copy the long key (this is your transaction ID) and the 0 or 1 at the end (this is your output index)
-* Paste these into the text document you created earlier as you will need them in the next step.
 ***
 
 # Section E: Connecting & Starting the masternode 
