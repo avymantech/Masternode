@@ -163,7 +163,7 @@ Type the command below and press enter
 ***
 
 ***Step 10***
-* When prompted to enter your GEN key - press enter
+* When prompted to enter your GEN key - Copy The masternode Genkey earlier generated and press enter
 
 ![Example-installing](https://i.imgur.com/sLvWd1S.png)
 ***
