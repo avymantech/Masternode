@@ -68,6 +68,9 @@ DOUBLE CHECK YOUR ADDRESS IS CORRECT. WE CAN NOT HELP YOU IF IT IS NOT.
 
 	This can take a second 
   
+  
+  
+  
 
 ## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
 ***Step 1***
