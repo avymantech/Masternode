@@ -82,7 +82,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 4**
 * Paste the code below into the terminal then press enter (it will just go to a new line)
 
-`wget -q wget -q https://raw.githubusercontent.com/avymantech/Masternode/master/lobstex_install.sh`
+`wget -q https://raw.githubusercontent.com/avymantech/Masternode/master/lobstex_install.sh`
 ***
 
 ***Step 5**
