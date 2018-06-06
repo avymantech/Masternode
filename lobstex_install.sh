@@ -40,18 +40,24 @@ purgeOldInstallation() {
 }
 
 
-function download_node() {
-  echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
-  wget -q $COIN_TGZ
-  sudo apt-get install unzip
-  unzip linux.zip
-  chmod +x lobstexd
-  ./lobstexd
-  ctrl+z
-  cd - >/dev/null 2>&1
-  rm -rf $TMP_FOLDER >/dev/null 2>&1
-  clear
-}
+echo "${Green}Im Starting to update!"
+	apt update
+
+echo "${Green}I've Finished updating! Now I need to upgrade."
+	apt upgrade -y
+
+echo "${Green}I've finished upgrading! Now I need to install dependencies"
+	sudo apt-get install nano unzip git -y
+
+echo "${Green}I've finished installing dependencies! Now I'll make folders and download the wallet."
+	wget https://github.com/avymantech/lobstex/releases/download/v2.0/linux.zip
+	unzip linux.zip
+	chmod +x lobstexd
+	chmod +x lobstex-cli
+	
+	./lobstexd -daemon
+	sleep 5
+	./lobstex-cli stop
 
 function configure_systemd() {
   cat << EOF > /etc/systemd/system/$COIN_NAME.service
