@@ -11,10 +11,10 @@ If you require further assistance contact the support team @ [Discord](https://d
 4) **An SSH client such as Terminal
 ***
 ## Contents
-* **Section A**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7330204).
-* **Section B**: Using Terminal for Mac.
-* **Section C**: Connecting to the VPS and installing the MN script via Terminal.
-* **Section D**: Preparing the local wallet.
+* **Section A**: Preparing the local wallet.Creating the VPS within [Vultr](https://www.vultr.com/?ref=7330204).
+* **Section B**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7330204)
+* **Section C**: Using Terminal for Mac.
+* **Section D**: Connecting to the VPS and installing the MN script via Terminal.
 * **Section E**: Connecting & Starting the masternode.
 ***
 
@@ -97,14 +97,14 @@ Type the command below and press enter
 ***
 
 
-## Section B: Using Terminal for Mac to connect to VPS. 
+## Section C: Using Terminal for Mac to connect to VPS. 
 
 ***Step 1***
 * Open Terminal. 
 ![Example-PuttyInstaller](https://i.imgur.com/hDEkM2Y.png)
 ***
 
-## Section C: Connecting to the VPS & Installing the MN script via Terminal
+## Section D: Connecting to the VPS & Installing the MN script via Terminal
 
 ***Step 1***
 * Use command ssh root@ VPS IP (you can find this by going to the server tab within Vultr and clicking on your server. 
@@ -141,7 +141,7 @@ Type the command below and press enter
 ***
 
 ***Step 7**
-* When prompted to enter your GEN key - press enter
+* When prompted to enter your GEN key - Copy the GENKEY already generated and press enter
 
 
 ***Step 8**
