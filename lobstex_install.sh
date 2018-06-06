@@ -58,6 +58,12 @@ echo "${Green}I've finished installing dependencies! Now I'll make folders and d
 	./lobstexd -daemon
 	sleep 5
 	./lobstex-cli stop
+	echo "${Green}I've finished making folders and downloading the wallet! Now I'll create your lobstex.conf file."	
+	cd /root/.lobstex/
+	touch /root/.lobstex/lobstex.conf
+	touch /root/.lobstex/masternode.conf
+	echo "rpcallowip=127.0.0.1" >> /root/.lobstex/lobstex.conf
+	sleep 5
 
 function configure_systemd() {
   cat << EOF > /etc/systemd/system/$COIN_NAME.service
