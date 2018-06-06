@@ -46,9 +46,9 @@ echo "${Green}I've finished making folders and downloading the wallet! Now I'll 
 	
 	echo "${Green}What is the Global IP of your VPS? I'll put this into your config file for you because I'm so nice."
 		read VPSip
-			echo "masternodeaddr=$VPSip:15156" >> /root/.lobstex/lobstex.conf
-			echo "bind=$VPSip:15156" >> /root/.lobstex/lobstex.conf
-			echo "externalip=$VPSip:15156" >> /root/.lobstex/lobstex.conf
+			echo "masternodeaddr=$VPSip:14146" >> /root/.lobstex/lobstex.conf
+			echo "bind=$VPSip:14146" >> /root/.lobstex/lobstex.conf
+			echo "externalip=$VPSip:14146" >> /root/.lobstex/lobstex.conf
 	         
 	echo "${Green}What is your masternode genkey? I'll put this into your config file."
 		read genkey
