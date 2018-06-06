@@ -41,7 +41,7 @@ echo "${Green}I've finished making folders and downloading the wallet! Now I'll 
 	echo "server=1" >> /root/.lobstex/lobstex.conf
 	echo "listen=1" >> /root/.lobstex/lobstex.conf
 	echo "staking=1" >> /root/.lobstex/lobstex.conf
-	echo "port=14146" >> /root/.lobstex/lobstex.conf
+	echo "port=15156" >> /root/.lobstex/lobstex.conf
 	echo "masternode=1" >> /root/.lobstex/lobstex.conf
 	
 	echo "${Green}What is the Global IP of your VPS? I'll put this into your config file for you because I'm so nice."
