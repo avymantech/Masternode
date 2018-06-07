@@ -55,7 +55,7 @@ a. Still in the Debug Console, enter this command, replacing "YourMasternodeName
 3. Send 10,000 LOBS to the wallet address you generated
 
 a. Copy the address you generated in the last step EXACTLY. We CAN NOT help
-anyone who has sent their AEX to the wrong address.
+anyone who has sent their LOBS to the wrong address.
 
 b. You can verify it is the correct address when you paste it into the "Pay to:" field,
 the "Label" field should autopopulate to your Masternode's name.
