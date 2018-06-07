@@ -81,40 +81,6 @@ Type the command below and press enter
 
 
 
-2. Generate Masternode address and name it
-
-a. Still in the Debug Console, enter this command, replacing "YourMasternodeName" with the name you want for your Masternode. 
-              
-	      getaccountaddress YourMasternodeName 
-
-		(ex. getaccountaddress mynode) 
-3. Send 1,000 AEX to the wallet address you generated
-
-a. Copy the address you generated in the last step EXACTLY. We CAN NOT help
-anyone who has sent their AEX to the wrong address.
-
-b. You can verify it is the correct address when you paste it into the "Pay to:" field,
-the "Label" field should autopopulate to your Masternode's name.
-
-4. Get proof of transaction to the Masternode
-
-a. Enter this command into the Debug Console
-
-               `masternode outputs` 
-
-This can take a second 
- 
-
-Type the command below and press enter 
-
-   
-
-* Copy the long key (this is your transaction ID) and the 0 or 1 at the end (this is your output index)
-* Paste these into the text document you created earlier as you will need them in the next step.
-***
-
-  
-
 ## Section B: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
 ***Step 1***
 * Register at [Vultr](https://www.vultr.com/?ref=7296974)
