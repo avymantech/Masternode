@@ -102,7 +102,7 @@ a. Enter this command into the Debug Console
 
                `masternode outputs` 
 
-This can take a second
+This can take a second 
  
 
 Type the command below and press enter 
