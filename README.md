@@ -41,7 +41,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 	c.	Save GENKEY on NOTEPAD/NOTES
 
 
-
+ 
 
 2. Generate Masternode address and name it
 
