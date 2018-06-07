@@ -8,6 +8,7 @@ COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/avymantech/lobstex.git'
 COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.0/linux.zip'
+COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='Lobstex'
 COIN_PORT=14146
@@ -40,30 +41,20 @@ purgeOldInstallation() {
 }
 
 
-echo "${Green}Im Starting to update!"
-	apt update
-
-echo "${Green}I've Finished updating! Now I need to upgrade."
-	apt upgrade -y
-
-echo "${Green}I've finished upgrading! Now I need to install dependencies"
-	sudo apt-get install nano unzip git -y
-
-echo "${Green}I've finished installing dependencies! Now I'll make folders and download the wallet."
-	wget https://github.com/avymantech/lobstex/releases/download/v2.0/linux.zip
-	unzip linux.zip
-	chmod +x lobstexd
-	chmod +x lobstex-cli
-	
-	./lobstexd -daemon
-	sleep 5
-	./lobstex-cli stop
-	echo "${Green}I've finished making folders and downloading the wallet! Now I'll create your lobstex.conf file."	
-	cd /root/.lobstex/
-	touch /root/.lobstex/lobstex.conf
-	touch /root/.lobstex/masternode.conf
-	echo "rpcallowip=127.0.0.1" >> /root/.lobstex/lobstex.conf
-	sleep 5
+function download_node() {
+  echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
+  cd $TMP_FOLDER >/dev/null 2>&1
+  rm $COIN_ZIP >/dev/null 2>&1
+  wget -q $COIN_TGZ
+  compile_error
+  unzip $COIN_ZIP >/dev/null 2>&1
+  chmod +x $COIN_DAEMON $COIN_CLI
+  compile_error
+  cp $COIN_DAEMON $COIN_CLI $COIN_PATH
+  cd - >/dev/null 2>&1
+  rm -rf $TMP_FOLDER >/dev/null 2>&1
+  clear
+}
 
 function configure_systemd() {
   cat << EOF > /etc/systemd/system/$COIN_NAME.service
@@ -160,6 +151,8 @@ masternodeprivkey=$COINKEY
 addnode=45.63.94.181:14146
 addnode=18.191.8.179:14146
 addnode=120.27.12.209:14146
+addnode=121.63.252.174:54422
+addnode=107.181.176.99:50194
 addnode=144.202.106.254:14146
 addnode=92.222.241.108:14146
 addnode=139.162.252.47:14146
@@ -263,14 +256,26 @@ clear
 function important_information() {
  echo
  echo -e "${BLUE}================================================================================================================================${NC}"
+ echo -e "${PURPLE}Windows Wallet Guide. https://github.com/avymantech/Masternode/blob/master/README.md${NC}"
+ echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}$COIN_NAME Masternode is up and running listening on port${NC}${PURPLE}$COIN_PORT${NC}."
  echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
  echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
  echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
  echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
  echo -e "${GREEN}MASTERNODE GENKEY is:${NC}${PURPLE}$COINKEY${NC}"
+ echo -e "${BLUE}================================================================================================================================"
+ echo -e "${CYAN}Follow twitter to stay updated.  https://twitter.com/LOBSTEXofficial${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${CYAN}Ensure Node is fully SYNCED with BLOCKCHAIN.${NC}"
+ echo -e "${BLUE}================================================================================================================================${NC}"
+ echo -e "${GREEN}Usage Commands.${NC}"
+ echo -e "${GREEN}lobstex-cli masternode status${NC}"
+ echo -e "${GREEN}lobstex-cli getinfo.${NC}"
+ echo -e "${BLUE}================================================================================================================================${NC}"
+ echo -e "${RED}Thank you for installing Masternode.${NC}"
+ echo -e "${BLUE}================================================================================================================================${NC}"
+ echo -e "${YELLOW}Welcome to LOBS community${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
  }
@@ -294,4 +299,3 @@ checks
 prepare_system
 download_node
 setup_node
-
