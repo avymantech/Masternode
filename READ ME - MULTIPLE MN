@@ -1,0 +1,3 @@
+Automated script
+
+wget https://github.com/avymantech/Masternode/blob/master/Multiple_MN.sh && chmod +x Multiple_MN.sh && ./Multiple_MN.sh
