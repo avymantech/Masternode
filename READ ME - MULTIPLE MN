@@ -1,3 +1,7 @@
 Automated script
 
 wget https://github.com/avymantech/Masternode/blob/master/Multiple_MN.sh && chmod +x Multiple_MN.sh && ./Multiple_MN.sh
+
+This given command will install the wallet on VPS, it will ask for the IP + Masternode Genkey
+
+Add IP and MN Genkey and you are good to go...
