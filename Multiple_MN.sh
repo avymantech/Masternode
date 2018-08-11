@@ -1,61 +1,63 @@
-#!/bin/sh
-# A shell script written to automate the Lobstex Masternode Setup Process
+Multiple MasterNodes on 1 IP
 
-Green=$(echo '\033[00;32m')
-Cyan=$(echo '\033[00;36m')
-RED=$(echo '\033[00;31m')
-YELLOW=$(echo  '\033[00;33m')
+prerequisite: VPS (eg. ubuntu 16.04), one already running lobstex-MN
 
-echo "${Green}Im Starting to update!"
-	apt update
+#copy your lobstexd and lobstex-cli into your $PATH eg.
 
-echo "${Green}I've Finished updating! Now I need to upgrade."
-	apt upgrade -y
+sudo cp lobstexd /usr/bin
+sudo cp lobstex-cli /usr/bin
 
-echo "${Green}I've finished upgrading! Now I need to install dependencies"
-	sudo apt-get install nano unzip git -y
+#copy your .lobstex datadir to a new .lobstexB datadir, just to be safe
+#stop your running lobstexd before
 
-echo "${Green}I've finished installing dependencies! Now I'll make folders and download the wallet."
-	wget https://github.com/avymantech/lobstex/releases/download/v2.0/linux.zip
-	unzip linux.zip
-	chmod +x lobstexd
-	chmod +x lobstex-cli
-	
-	./lobstexd -daemon
-	sleep 5
-	./lobstex-cli stop
-echo "${Green}I've finished making folders and downloading the wallet! Now I'll create your lobstex.conf file."	
-	cd /root/.lobstex/
-	touch /root/.lobstex/lobstex.conf
-	touch /root/.lobstex/masternode.conf
-	echo "rpcallowip=127.0.0.1" >> /root/.lobstex/lobstex.conf
-	sleep 5
-	echo "${Green}Enter an RPC username (It doesn't matter really what it is, just try to make it secure)"
-		read username
-			echo "rpcuser=$username" >> /root/.lobstex/lobstex.conf
+lobstex-cli stop
+cp -r .lobstex .lobstexB
+lobstexd
+cd .lobstexB
 
-	echo "${Green}Enter an RPC password(It doesn't matter really what it is, just try to make it secure)"
-		read password
-			echo "rpcpassword=$password" >> /root/.lobstex/lobstex.conf
-	
-	echo "server=1" >> /root/.lobstex/lobstex.conf
-	echo "listen=1" >> /root/. lobstex/lobstex.conf
-	echo "staking=1" >> /root/. lobstex/lobstex.conf
-	echo "port=35407" >> /root/. lobstex/lobstex.conf
-	echo "masternode=1" >> /root/. lobstex/lobstex.conf
-	
-	echo "${Green}What is the Global IP of your VPS? I'll put this into your config file for you because I'm so nice."
-		read VPSip
-			echo "masternodeaddr=$VPSip:15156” >> /root/.lobstex/lobstex.conf
-			echo "bind=$VPSip:15156” >> /root/.lobstex/lobstex.conf
-			echo "externalip=$VPSip:15156” >> /root/.lobstex/lobstex.conf
-	         
-	echo "${Green}What is your masternode genkey? I'll put this into your config file."
-		read genkey
-			echo "masternodeprivkey=$genkey" >> /root/.lobstex/lobstex.conf
+#edit lobstex.conf
 
-	
-echo "${YELLOW}Okay, it looks like you are all set. Let's startup the daemon!"
-	cd /root/
+nano lobstex.conf
 
-	./lobstexd -daemon
+#increment rpcport=15156 to rpcport=15157
+#(this is the port lobstex-cli will talk to your new daemon)
+#add a line 
+#bind=127.0.0.2
+#(for further nodes increment rpcport=15157+x and bind=127.0.0.2+x
+#eg. rpcport=15157, bind 127.0.0.3 for MN3)
+#adjust masternodeprivkey=64bBmC2Ea.................ef3
+#to the new value you got from the wallet-debug-console with: masternode genkey
+#save ^x y ENTER
+
+#edit a new shell-script for an easy startup of the second-MN
+
+cd ..
+nano lobstexdB
+
+#!/bin/bash
+
+lobstexd -datadir=/home/USERNAME/.lobstexB 
+
+#save
+
+chmod +x lobstexB
+
+#edit a new shell-script for easy communication with the second-MN
+
+nano lobstexB-cli
+
+#!/bin/bash
+
+lobstex-cli -datadir=/home/USERNAME/.lobstexB -rpcport=15157 $@
+#replace USERNAME (and increment rpcport=.... for the next MNs)
+#save
+
+chmod +x lobstex-cli
+
+#start your second MN
+
+./lobstexdB
+
+#check it with
+
+./lobstexB-cli masternode status
