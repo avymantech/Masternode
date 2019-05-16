@@ -185,6 +185,22 @@ addnode=140.82.55.213
 addnode=108.61.123.203
 addnode=217.61.105.20
 addnode=207.148.73.223
+addnode=167.99.203.221
+addnode=47.92.123.3
+addnode=45.77.160.44
+addnode=144.202.16.74
+addnode=54.174.3.93
+addnode=5.189.145.215
+addnode=51.68.175.126
+addnode=173.212.209.45
+addnode=80.211.81.160
+addnode=45.32.130.61
+addnode=51.75.69.79
+addnode=138.197.66.117
+addnode=217.61.0.190
+addnode=45.63.115.26
+addnode=51.158.79.70
+addnode=108.61.123.203
 
 
 EOF
