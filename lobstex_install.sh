@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='lobstex.conf'
-CONFIGFOLDER='/root/.lobstexcore'
+CONFIGFOLDER='/root/.lobstex'
 COIN_DAEMON='lobstexd'
 COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
@@ -31,8 +31,8 @@ purgeOldInstallation() {
     #remove old ufw port allow
     sudo ufw delete allow 8093/tcp > /dev/null 2>&1
     #remove old files
-    if [ -d "~/.lobstexcore" ]; then
-        sudo rm -rf ~/.lobstexcore > /dev/null 2>&1
+    if [ -d "~/.lobstex" ]; then
+        sudo rm -rf ~/.lobstex > /dev/null 2>&1
     fi
     #remove binaries and lobstex utilities
     cd /usr/local/bin && sudo rm lobstex-cli lobstex-tx lobstexd > /dev/null 2>&1 && cd
