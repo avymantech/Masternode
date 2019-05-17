@@ -65,9 +65,9 @@ function download_node() {
   clear
 }
 function configure_systemd() {
-  cat << EOF > /etc/systemd/system/$COIN_NAME.service
+  cat << EOF > /etc/systemd/system/$COIN_NAMEd
 [Unit]
-Description=$COIN_NAME service
+Description=$COIN_NAMEd
 After=network.target
 
 [Service]
@@ -93,13 +93,12 @@ EOF
 
   systemctl daemon-reload
   sleep 3
-  systemctl start $COIN_NAME.service
-  systemctl enable $COIN_NAME.service >/dev/null 2>&1
+  ./lobstexd -daemon >/dev/null 2>&1
 
   if [[ -z "$(ps axo cmd:100 | egrep $COIN_DAEMON)" ]]; then
     echo -e "${RED}$COIN_NAME is not running${NC}, please investigate. You should start by running the following commands as root:"
-    echo -e "${GREEN}systemctl start $COIN_NAME.service"
-    echo -e "systemctl status $COIN_NAME.service"
+    echo -e "${GREEN}./lobstexd -daemon"
+    echo -e "./lobstex-cli getinfo"
     echo -e "less /var/log/syslog${NC}"
     exit 1
   fi
@@ -283,9 +282,9 @@ function important_information() {
 
  echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
 
- echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
+ echo -e "${GREEN}Start:${NC}${RED}./lobstexd -daemon{NC}"
 
- echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
+ echo -e "${GREEN}Stop:${NC}${RED}./lobstex-cli stop{NC}"
 
  echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
 
