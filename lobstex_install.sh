@@ -53,10 +53,11 @@ function install_sentinel() {
 
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
+  sudo apt-get install libstdc++6 -y 2>&1
+  sudo apt-get install unzip 2>&1
   cd $TMP_FOLDER >/dev/null 2>&1
-  wget -q $COIN_TGZ
-  compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
+  wget https://github.com/lobstex/lobstex2.3/releases/download/2.3-v2/linux.zip
+  unzip linux.zip
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null 2>&1
