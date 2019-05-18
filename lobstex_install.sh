@@ -7,7 +7,7 @@ COIN_DAEMON='lobstexd'
 COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/avymantech/lobstex.git'
-COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.1.1/linux.zip'
+COIN_TGZ='https://github.com/lobstex/lobstex2.3/releases/download/2.3-v2/wills-linux.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='Lobstex'
@@ -52,6 +52,20 @@ echo -e "Installing required packages, it may take some time to finish.${NC}"
 apt-get update >/dev/null 2>&1
 apt-get dist-upgrade -y >/dev/null 2>&1
 apt-get install libzmq3-dev -y >/dev/null 2>&1
+apt-get update && apt-get install sudo && \
+sudo apt-get install build-essential software-properties-common -y && \
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
+sudo add-apt-repository ppa:george-edison55/cmake-3.x -y && \
+sudo apt-get update && \
+sudo apt-get install gcc-snapshot -y && \
+sudo apt-get update && \
+sudo apt-get install gcc-6 g++-6 -y && \
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 && \
+sudo apt-get install gcc-4.8 g++-4.8 -y && \
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8 && \
+sudo update-alternatives --config gcc && \
+sudo apt-get update && \
+sudo apt-get install cmake -y;
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
 build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev \
 libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget curl libdb4.8-dev bsdmainutils libdb4.8++-dev \
