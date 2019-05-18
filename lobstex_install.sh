@@ -53,6 +53,7 @@ apt-get update >/dev/null 2>&1
 apt-get dist-upgrade -y >/dev/null 2>&1
 apt-get install libzmq3-dev -y >/dev/null 2>&1
 apt-get update && apt-get install sudo && \
+sudo apt-get install unzip
 sudo apt-get install build-essential software-properties-common -y && \
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
 sudo add-apt-repository ppa:george-edison55/cmake-3.x -y && \
@@ -89,10 +90,10 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   rm $COIN_ZIP >/dev/null 2>&1
-  wget -q $COIN_TGZ
-  compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
-  chmod +x $COIN_DAEMON $COIN_CLI
+  wget -q https://github.com/lobstex/lobstex2.3/releases/download/2.3-v2/wills-linux.zip
+  unzip wills.linux.zip >/dev/null 2>&1
+  chmod u+x lobstexd
+  chmod u+x lobstex-cli
   compile_error
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd - >/dev/null 2>&1
