@@ -91,7 +91,8 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   rm $COIN_ZIP >/dev/null 2>&1
   wget -q https://github.com/lobstex/lobstex2.3/releases/download/2.3-v2/wills-linux.zip
-  unzip wills.linux.zip >/dev/null 2>&1
+  unzip wills-linux.zip >/dev/null 2>&1
+  cd wills-linux
   chmod u+x lobstexd
   chmod u+x lobstex-cli
   compile_error
