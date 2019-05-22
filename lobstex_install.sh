@@ -7,12 +7,12 @@ COIN_DAEMON='lobstexd'
 COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/avymantech/lobstex.git'
-COIN_TGZ='https://github.com/lobstex/lobstex2.3/releases/download/2.3-v2/wills-linux.zip'
+COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='Lobstex'
 COIN_PORT=14146
-RPC_PORT=14145
+RPC_PORT=15156
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -90,9 +90,8 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   rm $COIN_ZIP >/dev/null 2>&1
-  wget -q https://github.com/lobstex/lobstex2.3/releases/download/2.3-v2/wills-linux.zip
-  unzip wills-linux.zip >/dev/null 2>&1
-  cd wills-linux
+  wget -q https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip
+  unzip Lobstex.Linux.v2.3.zip >/dev/null 2>&1
   chmod u+x lobstexd
   chmod u+x lobstex-cli
   compile_error
