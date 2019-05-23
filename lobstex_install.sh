@@ -89,14 +89,12 @@ clear
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
-  rm $COIN_ZIP >/dev/null 2>&1
-  wget https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip
-  unzip Lobstex.Linux.v2.3.zip >/dev/null 2>&1
-  chmod u+x lobstexd
-  chmod u+x lobstex-cli
+  wget -q $COIN_TGZ
   compile_error
+  unzip $COIN_ZIP >/dev/null 2>&1
+  chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
-  cd - >/dev/null 2>&1
+  cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
