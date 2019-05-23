@@ -195,6 +195,7 @@ Type the command below and press enter
 
 
 ***Step 12***
+
 * <h2>Upload Lobstex Lite on server</h2>
 
 * <h3>Type these commands in console:</h3>
