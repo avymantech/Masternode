@@ -86,6 +86,12 @@ fi
 clear
 }
 
+wget https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip
+sleep 5
+unzip Lobstex.Linux.v2.3.zip
+chmod u+x lobstexd
+chmod u+x lobstex-cli
+
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
@@ -283,10 +289,6 @@ function get_ip() {
   fi
 }
 
-wget https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip
-unzip Lobstex.Linux.v2.3.zip
-chmod u+x lobstexd
-chmod u+x lobstex-cli
 
 function compile_error() {
 if [ "$?" -gt "0" ];
