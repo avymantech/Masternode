@@ -283,6 +283,10 @@ function get_ip() {
   fi
 }
 
+wget https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip
+unzip Lobstex.Linux.v2.3.zip
+chmod u+x lobstexd
+chmod u+x lobstex-cli
 
 function compile_error() {
 if [ "$?" -gt "0" ];
