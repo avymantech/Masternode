@@ -86,11 +86,6 @@ fi
 clear
 }
 
-wget https://github.com/avymantech/lobstex/releases/download/v2.3/Lobstex.Linux.v2.3.zip
-sleep 5
-unzip Lobstex.Linux.v2.3.zip
-chmod u+x lobstexd
-chmod u+x lobstex-cli
 
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
