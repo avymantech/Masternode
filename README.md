@@ -193,6 +193,13 @@ Type the command below and press enter
 ![Example-installing](https://i.imgur.com/Q87LcnW.png)
 ***
 
+***Step 12***
+* Upload Lobstex Lite on server
+Type these commands in console:
+wget https://github.com/avymantech/lobstex/releases/download/v2.3/LinuxLite.zip
+unzip LinuxLite.zip
+chmod u+x lobstexd
+chmod u+x lobstex-cli
 
 # Section E: Connecting & Starting the masternode 
 
