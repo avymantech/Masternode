@@ -178,7 +178,7 @@ Type the command below and press enter
 
 * <h5><i>wget https://github.com/avymantech/lobstex/releases/download/2.3.1/Lobstex.Linux.2.3.1.zip</i></h5>
 
-* <h5><i>unzip LinuxLite.zip</i></h5> 
+* <h5><i>unzip Lobstex.Linux.2.3.1.zip</i></h5> 
 
 * <h5><i>chmod u+x lobstexd</i></h5>
 
