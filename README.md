@@ -200,7 +200,7 @@ Type the command below and press enter
 
 * <h3>Type these commands in console:</h3>
 
-* <h5><i>wget https://github.com/avymantech/lobstex/releases/download/v2.3/LinuxLite.zip</i></h5>
+* <h5><i>wget https://github.com/avymantech/lobstex/releases/download/2.3.1/Lobstex.Linux.2.3.1.zip</i></h5>
 
 * <h5><i>unzip LinuxLite.zip</i></h5> 
 
