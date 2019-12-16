@@ -7,7 +7,7 @@ COIN_DAEMON='lobstexd'
 COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/avymantech/lobstex.git'
-COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/2.3.1/Lobstex.Linux.2.3.1.zip'
+COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.4.0/Lobstex-2.4.0-x86_64-pc-linux-gnu.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='Lobstex'
@@ -192,6 +192,10 @@ masternodeprivkey=$COINKEY
 
 #Addnodes
 
+addnode=144.202.106.254
+addnode=140.82.51.186
+addnode=144.202.106.37
+addnode=45.32.135.110
 addnode=45.63.94.181:14146
 addnode=18.191.8.179:14146
 addnode=120.27.12.209:14146
