@@ -20,7 +20,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 
 ## Section A: Preparing the Local wallet
 
-1. Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.0                           
+1. Download most recent Lobstex wallet from https://github.com/avymantech/lobstex/releases/tag/v2.4.0                           
    to your LOCAL system 
 
 	a. If Windows firewall blocks the wallet, it is safe to allow 
@@ -200,9 +200,9 @@ Type the command below and press enter
 
 * <h3>Type these commands in console:</h3>
 
-* <h5><i>wget https://github.com/avymantech/lobstex/releases/download/2.3.1/Lobstex.Linux.2.3.1.zip</i></h5>
+* <h5><i>wget https://github.com/avymantech/lobstex/releases/download/v2.4.0/Lobstex-2.4.0-x86_64-pc-linux-gnu.zip</i></h5>
 
-* <h5><i>unzip Lobstex.Linux.2.3.1.zip</i></h5> 
+* <h5><i>unzip Lobstex-2.4.0-x86_64-pc-linux-gnu.zip</i></h5> 
 
 * <h5><i>chmod u+x lobstexd</i></h5>
 
