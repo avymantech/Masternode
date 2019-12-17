@@ -7,7 +7,7 @@ COIN_DAEMON='lobstexd'
 COIN_CLI='lobstex-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/avymantech/lobstex.git'
-COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.4.0/Lobstex-2.4.0-x86_64-pc-linux-gnu.zip'
+COIN_TGZ='https://github.com/avymantech/lobstex/releases/download/v2.4.0/lobstex-2.4.0-linux64.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 SENTINEL_REPO='N/A'
 COIN_NAME='Lobstex'
@@ -92,7 +92,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
+  tar -xvf $COIN_ZIP >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null 2>&1
@@ -192,6 +192,13 @@ masternodeprivkey=$COINKEY
 
 #Addnodes
 
+addnode=80.240.28.88
+addnode=95.179.154.9
+addnode=109.172.52.153
+addnode=51.15.134.241
+addnode=45.32.135.110
+addnode=144.202.106.254
+addnode=217.69.10.80
 addnode=144.202.106.254
 addnode=140.82.51.186
 addnode=144.202.106.37
