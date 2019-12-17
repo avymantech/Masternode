@@ -176,9 +176,9 @@ Type the command below and press enter
 
 * <h3>Type these commands in console:</h3>
 
-* <h5><i>wget https://github.com/avymantech/lobstex/releases/download/v2.4.0/Lobstex-2.4.0-x86_64-pc-linux-gnu.zip</i></h5>
+* <h5><i>wget https://github.com/avymantech/lobstex/releases/download/v2.4.0/lobstex-2.4.0-linux64.tar.gz</i></h5>
 
-* <h5><i>unzip Lobstex-2.4.0-x86_64-pc-linux-gnu.zip</i></h5> 
+* <h5><i>tar -xvf lobstex-2.4.0-linux64.tar.gz</i></h5> 
 
 * <h5><i>chmod u+x lobstexd</i></h5>
 
